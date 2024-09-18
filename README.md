@@ -24,7 +24,7 @@ Installation
 
     bash
 
-git clone https://github.com/your-repo/navigation-app.git
+git clone https://github.com/rahukettu/navigation-app.git
 cd navigation-app
 
 Install project dependencies:
