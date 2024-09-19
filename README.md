@@ -163,4 +163,4 @@ Conclusion
 This project demonstrates a simple way to implement navigation using @react-navigation/native in combination with react-native-paper and custom components. It includes conditional rendering logic for navigation buttons in the custom App Bar.
 License
 
-This project is licensed under the MIT License.
+This project is licensed under the GNU General License.
