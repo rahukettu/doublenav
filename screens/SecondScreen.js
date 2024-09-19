@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 const SecondScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Second Screen</Text>
+      <Text style={styles.text}>Details</Text>
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );

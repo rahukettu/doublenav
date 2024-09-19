@@ -5,12 +5,9 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-      <Button
-        title="Go to Second Screen"
-        onPress={() => navigation.navigate('SecondScreen')}
-      />
-    </View>
-  );
+      <Button title="Go to Details" onPress={() => navigation.navigate("Details")} />
+  </View>
+);
 };
 
 const styles = StyleSheet.create({
@@ -21,6 +18,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,
+  },
+  button: {
+
   },
 });
 

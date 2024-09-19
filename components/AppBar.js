@@ -1,36 +1,35 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { Appbar } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const AppBar = ({ back, navigation }) => {
+const AppBar = ({ back, navigation, title }) => {
   return (
+    <SafeAreaView style={styles.safeArea}>
     <Appbar.Header style={styles.header}>
-      {back ? (
-        <Appbar.BackAction onPress={() => navigation.goBack()} />
-      ) : (
-        <>
-          <Appbar.Content title="Home" style={styles.contentContainer} />
+        {back ? (
+          <Appbar.BackAction onPress={() => navigation.goBack()} color="white" />
+        ) : null}
+        <Appbar.Content title={title} titleStyle={styles.title} />
+        {!back && (
           <Appbar.Action
-            icon={() => <Icon name="arrow-right" size={24} color="white" />}
-            onPress={() => navigation.navigate('SecondScreen')}
+            icon="arrow-right"
+            onPress={() => navigation.navigate('Details')}
+            color="white"
             style={styles.action}
           />
-        </>
-      )}
-    </Appbar.Header>
+        )}
+      </Appbar.Header>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#6200ee', // Primary color
-  },
-  contentContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+  safeArea: {
     flex: 1,
+  },
+  header: {
+    backgroundColor: '#800080',
+    height: 74,
   },
   title: {
     fontSize: 18,
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   action: {
-    padding: 0, // Remove default padding
+    padding: 0,
   },
 });
 
